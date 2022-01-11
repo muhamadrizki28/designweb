@@ -1,0 +1,101 @@
+@media only screen and (max-width: 992px) {
+  .box-about1,
+  .box-about2 {
+    flex: 0 0 40%;
+    flex-basis: 1;
+  }
+  main > section #textparallax-main {
+    font-size: 6rem;
+  }
+  .parallax-image-home #textparallax {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .all-box {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+  .all-box > * {
+    width: 200px;
+  }
+  .icon-profile p {
+    margin-left: 2rem;
+  }
+  .icon-sosmed {
+    width: 100%;
+  }
+  nav .logo {
+    justify-content: space-between;
+    width: 65%;
+  }
+  nav .logo p {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  nav ul {
+    position: absolute;
+    flex-direction: column;
+    top: 4rem;
+    height: 30vh;
+    width: 50%;
+    right: -19rem;
+    background-color: var(--var-main);
+  }
+  nav ul.active {
+    transition: 0.8s ease-in-out;
+    right: -1.4rem;
+  }
+  nav ul li {
+    margin: 0.3rem 1rem;
+  }
+  nav ul li:nth-child(3) {
+    margin: 0;
+    background-color: transparent;
+  }
+  nav ul li a {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .box-about1 {
+    margin: 2rem 0;
+    flex-basis: 3;
+  }
+  .box-about1,
+  .box-about2 {
+    flex: 0 0 70%;
+    flex-basis: 2;
+    font-size: 12px;
+  }
+  .mobile-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .img-ext {
+    left: -9rem;
+  }
+  .parallax-image-home #textparallax {
+    font-size: 3.5rem;
+  }
+  main > section #textparallax-main {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 300px) {
+  nav .logo p {
+    display: none;
+  }
+  nav {
+    justify-content: space-evenly;
+  }
+  nav ul {
+    width: 100%;
+  }
+  .box-about1,
+  .box-about2 {
+    flex: 0 0 90%;
+    flex-basis: 4;
+  }
+}

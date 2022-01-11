@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style_jojo.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+  </head>
+  <body>
+    <main>
+      <img src="assets/img/parallax-img/1.png" data-speed="-5" alt="" class="layer" />
+      <img src="assets/img/parallax-img/2.png" data-speed="5" alt="" class="layer" />
+      <img src="assets/img/parallax-img/3.png" data-speed="2" alt="" class="layer" />
+      <img src="assets/img/parallax-img/4.png" data-speed="6" alt="" class="layer" />
+      <img src="assets/img/parallax-img/5.png" data-speed="8" alt="" class="layer" />
+      <img src="assets/img/parallax-img/6.png" data-speed="-2" alt="" class="layer" />
+      <img src="assets/img/parallax-img/7.png" data-speed="4" alt="" class="layer" />
+      <img src="assets/img/parallax-img/8.png" data-speed="-9" alt="" class="layer" />
+      <img src="assets/img/parallax-img/9.png" data-speed="6" alt="" class="layer" />
+      <img src="assets/img/parallax-img/10.png" data-speed="-7" alt="" class="layer" />
+      <img src="assets/img/parallax-img/11.png" data-speed="-5" alt="" class="layer" />
+      <img src="assets/img/parallax-img/12.png" data-speed="5" alt="" class="layer" />
+      <div class="card">
+        <div class="inner-box" id="card">
+          <div class="container card-front">
+            <h1 style="text-align: center">SIGN IN</h1>
+            <form action="register.html" method="post">
+              <label>Username </label><br />
+              <input type="text" required="" placeholder="Masukkan username" /><br />
+              <label>Password </label><br />
+              <input type="password" required="" placeholder="Masukkan Password" /><br />
+              <button style="cursor: pointer">LOGIN</button>
+              <p onclick="register()" style="cursor: pointer">Don't Have Account? Register</p>
+              <div class="back-home">
+                <a href="index.html"> <p>Back</p></a>
+              </div>
+            </form>
+          </div>
+          <div class="container card-back">
+            <h1>REGISTRATION</h1>
+            <form action="login.html" method="post">
+              <label>Username</label>
+              <br />
+              <input type="text" required="" placeholder="Masukkan username anda" />
+              <br />
+              <label>Email</label>
+              <br />
+              <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="example@gmail.com" placeholder="ex: designkita@gmail.com" />
+              <br />
+              <label>Password</label>
+              <br />
+              <input type="password" required="" placeholder="Masukkan password anda" />
+              <br />
+              <button style="cursor: pointer">SIGN UP</button>
+              <p class="akhir" onclick="login()" style="cursor: pointer">Do You Have Account? LOGIN</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <p>© 2021 - All Rights Reserved Design and Developed By <a href="index.html"> Design Kita</a></p>
+        <!-- http://bit.ly/shyntaportfolio -->
+      </div>
+    </footer>
+    <!-- <footer>
+      <div class="footer">
+        <p>© 2021 - All Rights Reserved Design and Developed By <a href="http://bit.ly/shyntaportfolio"> Kita Bertiga</a></p>
+      </div>
+    </footer> -->
+    <script type="text/javascript">
+      var card = document.getElementById("card");
+
+      function register() {
+        card.style.transform = "rotateY(-180deg)";
+      }
+      function login() {
+        card.style.transform = "rotateY(0deg)";
+      }
+      document.addEventListener("mousemove", parallax);
+      function parallax(e) {
+        this.querySelectorAll(".layer").forEach((layer) => {
+          const speed = layer.getAttribute("data-speed");
+
+          const x = (window.innerWidth - e.pageX * speed) / 300;
+          layer.style.background = `rgba(0,0,0,.1)`;
+          const y = (window.innerHeight - e.pageY * speed) / 300;
+          layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: 'Poppins', sans-serif;
+}
+/* body {
+  height: 100vh;
+  background: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+main {
+  background: linear-gradient(rgba(49, 107, 131, 1), rgba(0, 0, 0, 1));
+  width: 100%;
+  height: 100vh;
+}
+main > img {
+  position: absolute;
+  top: 0;
+  left: -3rem;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  object-fit: cover;
+}
+p {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  /* padding-left: 100px; */
+  padding-bottom: 20px;
+}
+
+a {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.26);
+  perspective: 1000px;
+}
+.inner-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 1s ease;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  backface-visibility: hidden;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 25px;
+  width: 500px;
+  /* height: 800px; */
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+.back-home {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.5rem;
+}
+.back-home p {
+  font-weight: bold;
+  cursor: pointer;
+}
+.card-back {
+  transform: rotateY(180deg);
+  top: 10%;
+  left: 30%;
+}
+.container h1 {
+  text-align: left;
+  color: #fafafa;
+  margin-bottom: 30px;
+  /* text-transform: uppercase; */
+  border-bottom: 4px solid #6d8299;
+}
+.container label {
+  text-align: left;
+  color: #90caf9;
+}
+.container form input {
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #6d8299;
+  color: #fff;
+  font-size: 18px;
+}
+input::placeholder {
+  font-size: 0.9rem;
+}
+.akhir {
+  font-size: 0.9rem;
+}
+
+.container form button {
+  width: 100%;
+  height: 40px;
+  padding: 5px 0;
+  border: none;
+  background-color: #316b83;
+  font-size: 18px;
+  color: #fafafa;
+  border-radius: 20px;
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #316b83;
+  color: white;
+}
+.card-back h1 {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1000px) {
+}
+@media screen and (max-width: 759px) {
+  .container {
+    /* background-color: #ff7c10; */
+    width: 80%;
+  }
+  .card-back {
+    position: relative;
+    left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 580px) {
+}
